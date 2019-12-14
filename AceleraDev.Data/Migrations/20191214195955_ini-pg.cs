@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AceleraDev.Data.Migrations
 {
-    public partial class ini : Migration
+    public partial class inipg : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -50,7 +50,7 @@ namespace AceleraDev.Data.Migrations
                     CriadoEm = table.Column<DateTime>(nullable: false),
                     AtualizadoEm = table.Column<DateTime>(nullable: false),
                     Ativo = table.Column<bool>(nullable: false),
-                    Nome = table.Column<string>(maxLength: 255, nullable: true),
+                    Nome = table.Column<string>(maxLength: 255, nullable: false),
                     Email = table.Column<string>(maxLength: 255, nullable: false),
                     Senha = table.Column<string>(maxLength: 255, nullable: false),
                     Perfil = table.Column<string>(maxLength: 255, nullable: false)
@@ -137,12 +137,11 @@ namespace AceleraDev.Data.Migrations
             migrationBuilder.InsertData(
                 table: "usuario",
                 columns: new[] { "Id", "Ativo", "AtualizadoEm", "CriadoEm", "Email", "Nome", "Perfil", "Senha" },
-                values: new object[] { new Guid("ac02ad03-98f7-4335-a01e-dd6abbb78633"), false, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "admin@mail.com", "Administrador", "ADMIN", "81dc9bdb52d04dc20036dbd8313ed055" });
-
-            migrationBuilder.InsertData(
-                table: "usuario",
-                columns: new[] { "Id", "Ativo", "AtualizadoEm", "CriadoEm", "Email", "Nome", "Perfil", "Senha" },
-                values: new object[] { new Guid("7b4731bd-5ba0-40ac-a3fe-cd1272f7952e"), false, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "vendedor@mail.com", "Vendedor", "VENDEDOR", "81dc9bdb52d04dc20036dbd8313ed055" });
+                values: new object[,]
+                {
+                    { new Guid("4eab71a1-d502-4267-875c-7c23223e16ea"), true, new DateTime(2019, 12, 14, 16, 59, 54, 327, DateTimeKind.Local).AddTicks(4988), new DateTime(2019, 12, 14, 16, 59, 54, 327, DateTimeKind.Local).AddTicks(4988), "admin@mail.com", "Administrador", "ADMIN", "81dc9bdb52d04dc20036dbd8313ed055" },
+                    { new Guid("6b4b8b21-e589-453a-bc2c-a48bcc650646"), true, new DateTime(2019, 12, 14, 16, 59, 54, 338, DateTimeKind.Local).AddTicks(2321), new DateTime(2019, 12, 14, 16, 59, 54, 338, DateTimeKind.Local).AddTicks(2321), "vendedor@mail.com", "Vendedor", "VENDEDOR", "81dc9bdb52d04dc20036dbd8313ed055" }
+                });
 
             migrationBuilder.CreateIndex(
                 name: "IX_endereco_ClienteId",

@@ -222,10 +222,10 @@ namespace AceleraDev.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("5c248927-73f9-464f-ab92-9a69219d2de4"),
+                            Id = new Guid("4eab71a1-d502-4267-875c-7c23223e16ea"),
                             Ativo = true,
-                            AtualizadoEm = new DateTime(2019, 12, 8, 12, 45, 55, 35, DateTimeKind.Local).AddTicks(4444),
-                            CriadoEm = new DateTime(2019, 12, 8, 12, 45, 55, 35, DateTimeKind.Local).AddTicks(4444),
+                            AtualizadoEm = new DateTime(2019, 12, 14, 16, 59, 54, 327, DateTimeKind.Local).AddTicks(4988),
+                            CriadoEm = new DateTime(2019, 12, 14, 16, 59, 54, 327, DateTimeKind.Local).AddTicks(4988),
                             Email = "admin@mail.com",
                             Nome = "Administrador",
                             Perfil = "ADMIN",
@@ -233,10 +233,10 @@ namespace AceleraDev.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f753c7ca-4659-4f1d-8138-893b3abc9c4a"),
+                            Id = new Guid("6b4b8b21-e589-453a-bc2c-a48bcc650646"),
                             Ativo = true,
-                            AtualizadoEm = new DateTime(2019, 12, 8, 12, 45, 55, 78, DateTimeKind.Local).AddTicks(4973),
-                            CriadoEm = new DateTime(2019, 12, 8, 12, 45, 55, 78, DateTimeKind.Local).AddTicks(4973),
+                            AtualizadoEm = new DateTime(2019, 12, 14, 16, 59, 54, 338, DateTimeKind.Local).AddTicks(2321),
+                            CriadoEm = new DateTime(2019, 12, 14, 16, 59, 54, 338, DateTimeKind.Local).AddTicks(2321),
                             Email = "vendedor@mail.com",
                             Nome = "Vendedor",
                             Perfil = "VENDEDOR",
